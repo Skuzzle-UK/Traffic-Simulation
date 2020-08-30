@@ -14,14 +14,18 @@ T MessageQueue<T>::receive()
     // to wait for and receive new messages and pull them from the queue using move semantics. 
     // The received object should then be returned by the receive function. 
 }
-
+*/
 template <typename T>
 void MessageQueue<T>::send(T &&msg)
 {
     // FP.4a : The method send should use the mechanisms std::lock_guard<std::mutex> 
     // as well as _condition.notify_one() to add a new message to the queue and afterwards send a notification.
+    //@DONE
+    std::lock_guard<std::mutex> myLock(_mutex);
+    _queue.emplace_back(msg);
+    _condition.notify_one();
 }
-*/
+
 
 /* Implementation of class "TrafficLight" */
 
@@ -42,12 +46,15 @@ TrafficLightPhase TrafficLight::getCurrentPhase()
 {
     return _currentPhase;
 }
+*/
 
 void TrafficLight::simulate()
 {
-    // FP.2b : Finally, the private method „cycleThroughPhases“ should be started in a thread when the public method „simulate“ is called. To do this, use the thread queue in the base class. 
+    // FP.2b : Finally, the private method „cycleThroughPhases“ should be started in a thread when the public method „simulate“ is called. To do this, use the thread queue in the base class.
+    //@DONE
+    TrafficObject::threads.emplace_back(std::thread(&TrafficLight::cycleThroughPhases, this));
 }
-*/
+
 // virtual function which is executed in a thread
 void TrafficLight::cycleThroughPhases()
 {
@@ -67,6 +74,7 @@ void TrafficLight::cycleThroughPhases()
         {
             if (_currentPhase == red){_currentPhase = green;}
             else {_currentPhase = red;}
+            _tlQueue.send(std::move(_currentPhase));
             time = std::chrono::high_resolution_clock::now();
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
