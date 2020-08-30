@@ -58,7 +58,7 @@ private:
     // and use it within the infinite loop to push each new TrafficLightPhase into it by calling 
     // send in conjunction with move semantics.
     //@DONE
-    MessageQueue<TrafficLightPhase> _tlQueue;
+    MessageQueue<TrafficLightPhase> _MsgQueue;
 
     std::condition_variable _condition;
     std::mutex _mutex;
