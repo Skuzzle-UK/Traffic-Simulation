@@ -43,7 +43,7 @@ public:
     ~TrafficLight();
 
     // getters / setters
-    enum TrafficLightPhase {red = 1, green = 2};
+    enum TrafficLightPhase {red, green};
     TrafficLightPhase getCurrentPhase();
 
     // typical behaviour methods

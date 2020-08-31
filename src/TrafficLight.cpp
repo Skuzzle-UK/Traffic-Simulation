@@ -17,8 +17,8 @@ T MessageQueue<T>::receive()
     std::unique_lock<std::mutex> uLock(_mutex);
     _condition.wait(uLock, [this] {return !_queue.empty();});
     
-    T msg = std::move(_queue.front());
-    _queue.pop_front();
+    T msg = std::move(_queue.back());
+    _queue.pop_back();
     return msg;
 }
 
@@ -29,19 +29,23 @@ void MessageQueue<T>::send(T &&msg)
     // as well as _condition.notify_one() to add a new message to the queue and afterwards send a notification.
     //@DONE
     std::lock_guard<std::mutex> lck(_mutex);
-    _queue.emplace_back(msg);
+    _queue.push_back(msg);
     _condition.notify_one();
 }
 
-
 /* Implementation of class "TrafficLight" */
 
-/* 
+ 
 TrafficLight::TrafficLight()
 {
     _currentPhase = TrafficLightPhase::red;
 }
-*/
+
+TrafficLight::~TrafficLight()
+{
+    
+}
+
 void TrafficLight::waitForGreen()
 {
     // FP.5b : add the implementation of the method waitForGreen, in which an infinite while-loop 
@@ -51,23 +55,25 @@ void TrafficLight::waitForGreen()
     while (true)
     {
         if (_MsgQueue.receive() == TrafficLightPhase::green){
+            std::cout << "Traffic light is green" << std::endl;
             return;
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
 }
 
-/*
-TrafficLightPhase TrafficLight::getCurrentPhase()
+
+TrafficLight::TrafficLightPhase TrafficLight::getCurrentPhase()
 {
     return _currentPhase;
 }
-*/
+
 
 void TrafficLight::simulate()
 {
     // FP.2b : Finally, the private method „cycleThroughPhases“ should be started in a thread when the public method „simulate“ is called. To do this, use the thread queue in the base class.
     //@DONE
+    std::cout << "Traffic light simulation started" << std::endl;
     TrafficObject::threads.emplace_back(std::thread(&TrafficLight::cycleThroughPhases, this));
 }
 
@@ -80,11 +86,10 @@ void TrafficLight::cycleThroughPhases()
     // Also, the while-loop should use std::this_thread::sleep_for to wait 1ms between two cycles.
     //@DONE
     auto time = std::chrono::high_resolution_clock::now();
-
+        auto randomDuration = std::chrono::milliseconds((rand() %2000) + 4000);
     while (true)
     {
         auto time_now = std::chrono::high_resolution_clock::now();
-        auto randomDuration = std::chrono::milliseconds((rand() %2000) + 4000);
         auto time_diff = time_now - time;
         if ( time_diff >= randomDuration )
         {

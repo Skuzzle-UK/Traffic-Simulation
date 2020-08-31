@@ -5,6 +5,7 @@ CMakeFiles/traffic_simulation.dir/src/Graphics.cpp.o
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Graphics.cpp
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Graphics.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
+ /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /usr/local/include/opencv4/opencv2/calib3d.hpp
  /usr/local/include/opencv4/opencv2/core.hpp
@@ -107,12 +108,14 @@ CMakeFiles/traffic_simulation.dir/src/Intersection.cpp.o
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.cpp
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+ /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
 CMakeFiles/traffic_simulation.dir/src/Street.cpp.o
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.cpp
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+ /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
 CMakeFiles/traffic_simulation.dir/src/TrafficLight.cpp.o
@@ -126,6 +129,7 @@ CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.o
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Graphics.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+ /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficSimulator-Final.cpp
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
@@ -229,6 +233,7 @@ CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.o
 CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.o
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+ /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.cpp
  /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
