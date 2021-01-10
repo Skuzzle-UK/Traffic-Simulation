@@ -6,6 +6,44 @@
 
 #IncludeRegexTransform: 
 
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.cpp
+iostream
+-
+thread
+-
+chrono
+-
+future
+-
+random
+-
+Street.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+Intersection.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
+Vehicle.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
+TrafficLight.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
+
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
+vector
+-
+future
+-
+mutex
+-
+memory
+-
+TrafficObject.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
+TrafficLight.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
+
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+TrafficObject.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
+
 /mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.cpp
 iostream
 -
@@ -35,4 +73,8 @@ thread
 -
 mutex
 -
+
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
+TrafficObject.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
 
